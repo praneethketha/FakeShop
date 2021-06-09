@@ -1,0 +1,143 @@
+.singleProduct{
+    padding: .5em 0;
+    margin-top: 7em !important;
+    margin-bottom: 3em !important;
+    align-items: center;
+}
+.singleProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width : 992px) {
+    .singleProduct{
+        display: grid !important;
+        gap: 4em;
+        grid-template-columns: repeat(2,auto);
+    }
+}
+.image{
+    margin: 0;
+}
+.image img{
+    height: 400px;
+    width: 300px;
+    object-fit: contain;
+}
+.singleProduct__content{
+    text-align:start;
+    width: 80%;
+}
+.singleProduct__content h1{
+    font-size: 1.6em;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.singleProduct__content h2{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.singleProduct__content p{
+    font-size: 0.9em;
+    line-height: 2;
+}
+.info{
+    text-transform: capitalize;
+    width: 200px;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+}
+.info span{
+    font-weight: 700;
+}
+.singleProduct__content hr{
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.amount_btns h2{
+    font-size: 3rem;
+    margin: 1rem;
+}
+.addToCart{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -25%;
+    font-size: 1.4em;
+    transform: translate(-50%, -50%);
+}
+.box{
+    position: absolute;
+    top: -20%;
+    left: 52%;
+    z-index: 1;
+    font-size: 1em;
+    transform: translate(-50%, -50%);
+}
+.btn_container .cart_btn{
+    padding: 10px;
+    width: 120px ;
+    height: 35px ;
+    background-color: rgb(0, 66, 47);
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
+    overflow:hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    transition: all 250ms ease-in;
+}
+.btn_container .cart_btn:hover .addToCart{
+    animation: cart 1s ease-in-out forwards;
+}
+.btn_container .cart_btn:hover .box{
+    animation: box 1s ease-in-out forwards;
+}
+@keyframes cart {
+    0%{
+        left: -25%;
+    }
+    40%, 60%{
+        left: 50%;
+    }
+    100%{
+        left: 125%;
+    }
+}
+@keyframes box {
+    0%,40%{
+        top: -20%;
+    }
+    60%{
+        top: 34%;
+        left: 52%;
+    }
+    100%{
+        top: 34%;
+        left: 126%;
+    }
+}
+.btn_container .cart_btn:hover span{
+    display: none;
+}
+.btn_container .cart_btn:hover{
+    transform: scale(1.05);
+}
+@media screen and (max-width:800px){
+    .singleProduct__content h1{
+        font-size: 1.3rem;
+    }
+    .singleProduct__content h2{
+        font-size: 1rem;
+    }
+    .singleProduct__content p{
+        font-size: 0.9rem;
+    }
+    .amount_btns h2{
+        font-size: 1.7rem;
+    }
+}

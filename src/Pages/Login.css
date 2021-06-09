@@ -1,0 +1,151 @@
+.loginPage{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.loginPage .login_signup{
+    position: absolute;
+    transform: perspective(500px) rotateY(0deg);
+    transition: all 1s ease-in;
+    transform-style: preserve-3d;
+    width: 90%;
+    height: 450px;
+    margin: 0 auto;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    border-radius: 0.25rem;
+}
+.login_signup.front{
+    background-color: #fff;
+    backface-visibility: hidden;
+}
+.login_signup.back{
+    background-color: #fff;
+    backface-visibility: hidden;
+    transform: perspective(500px) rotateY(-180deg);
+}
+.login_signup.front.flip{
+    transform: perspective(500px) rotateY(-180deg);
+}
+.login_signup.back.flipback{
+    transform: perspective(500px) rotateY(-360deg);
+}
+.login_signup h2{
+    width: 90%;
+    margin: 3rem auto;
+}
+.login_signup.back h2{
+    margin: 2rem auto !important;
+}
+.login_signup .form{
+    margin: 0 auto;
+    width:90%;
+    box-sizing: border-box;
+}
+.login_signup .input_group{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.login_signup.back .input_group{
+    margin: 22px 0;
+}
+.login_signup .form input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.login_signup .form label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 500ms;
+}
+.input_group span::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(1, 100, 71);
+    transition: 500ms;
+}
+.input_group input:focus + label,
+.input_group input:valid ~ label{
+    top: -5px;
+    color: rgb(1, 100, 71);
+    font-size: 14px;
+}
+.input_group input:focus ~ span::before,
+.input_group input:valid ~ span::before{
+    width: 100%;
+}
+.form .login__span{
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    width: 100%;
+    margin: 1rem 0;
+}
+.login__span > div{
+    display: flex;
+    align-items: flex-start;
+}
+.form .login__span input{
+    width: 10% !important;
+    height: 80% !important;
+    cursor: pointer;
+}
+.form .login__span p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+    margin-left: auto;
+    color: rgb(1, 100, 71);
+    cursor: pointer;
+}
+.login__span p:hover{
+    text-decoration: underline;
+}
+.form button{
+    margin-top: 2rem !important;
+}
+.login_signup.back button{
+    margin-top: 0 !important;
+}
+.create_account{
+    margin-top: 1rem;
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #adadad;
+}
+.create_account span{
+    font-weight: 600;
+    color: rgb(1, 100, 71);
+    text-decoration: underline;
+    cursor: pointer;
+    padding-left: 5px;
+}
+@media screen and (min-width: 450px){
+    .loginPage .login_signup{
+        width: 400px;
+    }
+    .create_account{
+        font-size: 1rem;
+    }
+    .form .login__span p{
+        font-size: 1rem;
+    }
+}

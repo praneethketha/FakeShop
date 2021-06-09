@@ -1,0 +1,145 @@
+.home_image {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle, white, rgb(0, 66, 47));
+}
+@media screen and (max-width:700px){
+  .home_content{
+    justify-content: flex-end;
+    flex-direction: column-reverse !important;
+  }
+  .home_content img{
+    width: 90% !important;
+  }
+}
+.home_content {
+  margin: 0 auto;
+  width: 80%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home_image .home_content h1 {
+  margin: 0;
+}
+.home_image .home_content h1{
+  animation: write linear 250ms infinite;
+}
+.home_image .home_content p {
+  width: 100%;
+  max-width: 1170px;
+}
+.home_image .home_content img{
+  width: 50%;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #fff);
+}
+.btn,
+.subscribe {
+  text-decoration: none;
+  text-transform: capitalize;
+  background: rgb(0, 66, 47);
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 10px 20px;
+  border: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+  position: relative;
+}
+.btn {
+  border-radius: 0.25rem;
+  overflow-x: auto;
+}
+.btn:hover,
+.subscribe:hover {
+  background-color: rgb(122, 189, 169);
+  color: rgb(0, 66, 47);
+}
+.exlusiveOffer,
+.offer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3em;
+}
+.exclusive img {
+  width: 350px;
+  height: 250px;
+}
+.offer .paragraph h1 {
+  font-size: 1.8em;
+  letter-spacing: 2px;
+}
+.offer .paragraph,
+.exlusiveOffer .joinNow {
+  width: 50%;
+}
+.input_join {
+  display: flex;
+  align-items: center;
+}
+.input_join input {
+  width: 300px;
+  padding: 10px 10px;
+  outline: none;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+}
+.arrow {
+  font-size: 16px;
+  vertical-align: middle;
+  transition: transform 250ms ease-in;
+}
+@media screen and (max-width: 1100px) {
+  .exlusiveOffer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .offer img{
+    width: 260px;
+    height: 200px;
+  }
+  .exlusiveOffer .joinNow,
+  .offer .paragraph {
+    width: 100%;
+  }
+  .offer .paragraph p{
+      font-size: 0.8rem;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .input_join input {
+    width: 50vw;
+    max-width: 400px;
+  }
+  .offer .paragraph h1 {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+  }
+  .exlusiveOffer h1{
+      font-size: 1.2rem;
+  }
+  .exlusiveOffer p{
+      font-size: 0.8rem;
+  }
+  .home_image .home_content p {
+    width: 100%;
+  }
+  .home_content h1{
+    font-size: 1.5rem;
+  }
+}

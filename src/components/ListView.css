@@ -1,0 +1,75 @@
+.listView {
+  display: grid;
+  row-gap: 3rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .listView article {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: flex-start;
+  }
+  .listView img {
+    display: block;
+    width: 150px;
+    height: 180px;
+    margin: 0 auto;
+    padding: 1rem auto;
+    object-fit: contain;
+  }
+  .listView .image_container {
+    width: 180px;
+    height: 190px;
+  }
+}
+.listView img {
+  display: block;
+  height: 180px;
+  margin: 0 auto;
+  padding: 1rem auto;
+  object-fit: contain;
+}
+.listView .image_container {
+  margin-bottom: 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+.listView h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+.listView span {
+  color: #000 !important;
+}
+.listView h5 {
+  margin: 0;
+  display: inline-block;
+}
+.listView h4,
+.listView h5 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+}
+.listView h5 {
+  color: rgb(0, 66, 47);
+  font-weight: 400;
+}
+.listView p {
+  max-width: 45rem;
+  margin-bottom: 1rem;
+  color: #1a2770;
+}
+.listView .list_btn {
+  text-decoration: none;
+  padding: 5px 25px;
+  border-radius: 5px;
+  background: rgb(0, 66, 47);
+  color: white;
+  font-size: 1rem;
+}
+.listView .list_btn:hover {
+  background-color: rgb(122, 189, 169);
+  color: rgb(0, 66, 47);
+}
